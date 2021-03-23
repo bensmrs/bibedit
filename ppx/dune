@@ -1,0 +1,11 @@
+(library
+ (name ppx_cmdargs)
+ (modules Lexer Parser Ppx_cmdargs Types Util)
+ (kind ppx_rewriter)
+ (libraries ppxlib str))
+
+(ocamllex lexer)
+
+(menhir
+ (modules parser)
+ (flags --explain))

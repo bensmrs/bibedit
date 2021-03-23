@@ -1,0 +1,10 @@
+(library
+ (name bib)
+ (modules Lexer Parser Util Types Processing Bib)
+ (libraries str))
+
+(ocamllex lexer)
+
+(menhir
+ (modules parser)
+ (flags --explain))

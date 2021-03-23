@@ -1,0 +1,5 @@
+(executable
+ (name bibedit)
+ (modules bibedit exceptions argparse)
+ (preprocess (pps ppx_cmdargs))
+ (libraries bib str))
